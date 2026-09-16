@@ -201,7 +201,7 @@ const faq = [
         </figure>
       </section>
 
-      <section class="intro-section" aria-labelledby="notre-approche">
+      <section class="intro-section approach-section" aria-labelledby="notre-approche">
         <h2 id="notre-approche" tabindex="-1">L'APPROCHE ÉCRIN</h2>
         <div class="approach-copy">
           <p>Écrin place la récupération au cœur de son approche. Nous développons une gamme de compléments alimentaires pensée pour aider les femmes actives à <strong>préserver et restaurer leurs ressources</strong>, fortement sollicitées par leur quotidien.</p>
@@ -633,9 +633,20 @@ const faq = [
       .intro-section { padding: 3rem var(--pad); border-bottom: 1px solid var(--line); }
       .intro-section h2, .section-title { margin: 0; text-align: center; text-transform: uppercase; font-size: clamp(1.166667rem, 2.4vw, 1.75rem); }
       .daily-title { grid-column: 1 / -1; }
+      .approach-section {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: clamp(2.5rem, 5vw, 4rem);
+        align-items: start;
+      }
+      .approach-section > h2 { grid-column: 1 / -1; }
+      @media (min-width: 56rem) {
+        .approach-section { grid-template-columns: 0.85fr 1.15fr; }
+        .approach-copy { grid-column: 2; }
+      }
       .approach-copy {
-        max-width: 75ch;
-        margin: 2rem auto 0;
+        min-width: 0;
+        margin: 0;
         color: var(--body);
         font-family: "Playfair Display", Georgia, serif;
         font-size: 16px;
