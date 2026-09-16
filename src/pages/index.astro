@@ -167,7 +167,8 @@ const faq = [
         </div>
       </div>
       <!-- ───────────── HERO ───────────── -->
-      <section class="hero" id="top">
+      <section class="hero" id="top" aria-labelledby="votre-quotidien">
+        <h2 class="section-title daily-title" id="votre-quotidien" tabindex="-1">AU RYTHME DE VOS JOURNÉES</h2>
         <div class="hero-copy reveal">
           <h1 class="hero-title">
             Saturation, brouillard mental, irritabilité, perte de mémoire,<br />
@@ -195,9 +196,6 @@ const faq = [
         </figure>
       </section>
 
-      <section class="intro-section" aria-labelledby="votre-quotidien">
-        <h2 id="votre-quotidien" tabindex="-1">AU RYTHME DE VOUS JOURNÉE</h2>
-      </section>
       <section class="intro-section" aria-labelledby="notre-approche">
         <h2 id="notre-approche" tabindex="-1">L'APPROCHE ÉCRIN</h2>
       </section>
@@ -604,7 +602,8 @@ const faq = [
         .panorama-copy { max-width: 64%; font-size: clamp(0.5rem, 2.25vw, 0.75rem); }
       }
       .intro-section { padding: 3rem var(--pad); border-bottom: 1px solid var(--line); }
-      .intro-section h2 { margin: 0; text-align: center; text-transform: uppercase; }
+      .intro-section h2, .section-title { margin: 0; text-align: center; text-transform: uppercase; font-size: clamp(1.166667rem, 2.4vw, 1.75rem); }
+      .daily-title { grid-column: 1 / -1; }
       @media (max-width: 36rem) {
         :root { --nav-height: calc((1.925rem + 33px + 0.5625rem + 20.8px + 1px) / 4); }
       }
