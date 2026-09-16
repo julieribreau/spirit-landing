@@ -228,8 +228,35 @@ const faq = [
           <p>Nous visons une routine d’<strong>un à deux compléments par jour</strong>, chacun avec un rôle précis, pour réunir les bénéfices recherchés sans multiplier les produits ni les moments de prise.</p>
         </div>
       </section>
-      <section class="intro-section" aria-labelledby="la-science">
+      <section class="intro-section science-section" aria-labelledby="la-science">
         <h2 id="la-science" tabindex="-1">LA SCIENCE EN TOUTE CLARTÉ</h2>
+        <p class="science-intro">Chaque choix de formulation doit pouvoir s’expliquer. Pour Écrin, <strong>rigueur scientifique et clarté vont de pair</strong>.</p>
+        <div class="science-grid">
+          <article class="science-column">
+            <h3>Des choix éclairés par la recherche</h3>
+            <p>La sélection des actifs s’appuiera sur une lecture critique des études, en privilégiant les données humaines pertinentes pour les besoins visés.</p>
+            <!-- Emplacement réservé à une future image carrée. -->
+            <div class="science-image-slot" aria-hidden="true"></div>
+          </article>
+          <article class="science-column">
+            <h3>Des formules conçues avec précision</h3>
+            <p>Chaque ingrédient devra avoir un rôle précis, une forme et un dosage justifiés. La cohérence des associations et les précautions d’utilisation seront également prises en compte.</p>
+            <!-- Emplacement réservé à une future image carrée. -->
+            <div class="science-image-slot" aria-hidden="true"></div>
+          </article>
+          <article class="science-column">
+            <h3>Des études pour approfondir nos connaissances</h3>
+            <p>Au fil du développement d’Écrin, des études sont prévues pour évaluer nos formules, en affiner la conception et mieux cerner leurs effets.</p>
+            <!-- Emplacement réservé à une future image carrée. -->
+            <div class="science-image-slot" aria-hidden="true"></div>
+          </article>
+          <article class="science-column">
+            <h3>Une transparence utile</h3>
+            <p>La composition, les dosages et les références scientifiques seront accessibles et accompagnés d’explications claires. Les résultats seront présentés avec leurs limites, en précisant ce qui a été étudié : un ingrédient, une association ou une formule complète.</p>
+            <!-- Emplacement réservé à une future image carrée. -->
+            <div class="science-image-slot" aria-hidden="true"></div>
+          </article>
+        </div>
       </section>
       <section class="intro-section" aria-labelledby="notre-mission">
         <h2 id="notre-mission" tabindex="-1">LES FEMMES AU COEUR D'ÉCRIN</h2>
@@ -633,6 +660,33 @@ const faq = [
       .intro-section { padding: 3rem var(--pad); border-bottom: 1px solid var(--line); }
       .intro-section h2, .section-title { margin: 0; text-align: center; text-transform: uppercase; font-size: clamp(1.166667rem, 2.4vw, 1.75rem); }
       .daily-title { grid-column: 1 / -1; }
+      .science-section {
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 16px;
+        line-height: 1.7;
+        color: var(--body);
+      }
+      .science-intro {
+        margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+        text-align: center;
+      }
+      .science-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+        margin-top: 2.5rem;
+      }
+      .science-column { display: flex; flex-direction: column; min-width: 0; }
+      .science-column h3 { margin: 0 0 0.75rem; font: inherit; font-weight: 700; }
+      .science-column p { margin: 0 0 1.5rem; }
+      .science-image-slot { width: 100%; aspect-ratio: 1; margin-top: auto; }
+      @media (min-width: 40rem) {
+        .science-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      }
+      @media (min-width: 64rem) {
+        .science-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      }
+
       .approach-section {
         display: grid;
         grid-template-columns: 1fr;
