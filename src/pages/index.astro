@@ -234,7 +234,7 @@ const faq = [
         <div class="science-grid">
           <article class="science-column">
             <h3>Des choix éclairés par la recherche</h3>
-            <p>La sélection des actifs s’appuiera sur une lecture critique des études, en privilégiant les données humaines pertinentes pour les besoins visés.</p>
+            <p>La sélection des actifs s’appuiera sur une lecture critique des études, avec une attention particulière portée sur la qualité des données humaines et sur leur pertinence pour les besoins visés.</p>
             <!-- Emplacement réservé à une future image carrée. -->
             <div class="science-image-slot" aria-hidden="true"></div>
           </article>
@@ -245,14 +245,14 @@ const faq = [
             <div class="science-image-slot" aria-hidden="true"></div>
           </article>
           <article class="science-column">
-            <h3>Des études pour approfondir nos connaissances</h3>
-            <p>Au fil du développement d’Écrin, des études sont prévues pour évaluer nos formules, en affiner la conception et mieux cerner leurs effets.</p>
+            <h3>Des études pour progresser</h3>
+            <p>Au fil du développement d’Écrin, des études sont prévues pour évaluer nos formules. Leurs résultats permettront d’en affiner la conception et de mieux cerner leurs effets.</p>
             <!-- Emplacement réservé à une future image carrée. -->
             <div class="science-image-slot" aria-hidden="true"></div>
           </article>
           <article class="science-column">
             <h3>Une transparence utile</h3>
-            <p>La composition, les dosages et les références scientifiques seront accessibles et accompagnés d’explications claires. Les résultats seront présentés avec leurs limites, en précisant ce qui a été étudié : un ingrédient, une association ou une formule complète.</p>
+            <p>Composition, dosages, sources et références scientifiques seront accessibles et accompagnés d’explications claires. Les résultats seront présentés avec leurs limites, en précisant ce qui a été étudié.</p>
             <!-- Emplacement réservé à une future image carrée. -->
             <div class="science-image-slot" aria-hidden="true"></div>
           </article>
@@ -673,13 +673,13 @@ const faq = [
       .science-grid {
         display: grid;
         grid-template-columns: minmax(0, 1fr);
-        gap: 2rem;
-        margin-top: 2.5rem;
+        gap: clamp(2.5rem, 4vw, 4rem);
+        margin-top: clamp(3.5rem, 6vw, 5rem);
       }
       .science-column { display: flex; flex-direction: column; min-width: 0; }
       .science-column h3 { margin: 0 0 0.75rem; font: inherit; font-weight: 700; }
-      .science-column p { margin: 0 0 1.5rem; }
-      .science-image-slot { width: 100%; aspect-ratio: 1; margin-top: auto; }
+      .science-column p { margin: auto 0 1.5rem; }
+      .science-image-slot { width: 100%; aspect-ratio: 1; flex-shrink: 0; }
       @media (min-width: 40rem) {
         .science-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       }
