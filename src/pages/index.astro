@@ -120,7 +120,7 @@ const faq = [
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif&family=Playfair+Display:wght@500&family=Montserrat:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif&family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@500&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -203,6 +203,30 @@ const faq = [
 
       <section class="intro-section" aria-labelledby="notre-approche">
         <h2 id="notre-approche" tabindex="-1">L'APPROCHE ÉCRIN</h2>
+        <div class="approach-copy">
+          <p>Écrin place la récupération au cœur de son approche. Nous développons une gamme de compléments alimentaires pensée pour aider les femmes actives à <strong>préserver et restaurer leurs ressources</strong>, fortement sollicitées par leur quotidien.</p>
+
+          <p>Notre ambition est de faire de la récupération le point de départ d’une cascade de bénéfices :</p>
+          <ol>
+            <li>
+              <strong>Soutenir les facteurs qui influencent la récupération et l’équilibre</strong>
+              <p>Le sommeil, la réponse au stress et la capacité de l’organisme à s’adapter aux changements de son environnement.</p>
+            </li>
+            <li>
+              <strong>Favoriser la préservation et la reconstitution des ressources</strong> : Mieux récupérer, retrouver davantage d’énergie et en limiter les fluctuations.
+            </li>
+            <li>
+              <strong>Retrouver davantage de maîtrise sur son quotidien</strong>
+              <p>Sur le plan cognitif : plus de concentration, de lucidité, de disponibilité mentale et de capacité à prendre du recul.<br />Sur le plan émotionnel : davantage de stabilité dans l’humeur et les émotions.</p>
+            </li>
+          </ol>
+
+          <p>Pour Écrin, la complémentation est <strong>un soutien</strong> au sein d’une <strong>approche globale de récupération</strong>, où le repos, l’alimentation, le mouvement et l’aménagement du quotidien gardent toute leur place.</p>
+
+          <p>Nos formules sont pensées pour qu’une prise soit <strong>aussi simple qu’agréable</strong>. Nous souhaitons vous offrir un rituel qui trouve naturellement sa place dans votre vie et s’inscrit dans la durée, même lorsque le rythme s’intensifie.</p>
+
+          <p>Nous visons une routine d’<strong>un à deux compléments par jour</strong>, chacun avec un rôle précis, pour réunir les bénéfices recherchés sans multiplier les produits ni les moments de prise.</p>
+        </div>
       </section>
       <section class="intro-section" aria-labelledby="la-science">
         <h2 id="la-science" tabindex="-1">LA SCIENCE EN TOUTE CLARTÉ</h2>
@@ -609,6 +633,19 @@ const faq = [
       .intro-section { padding: 3rem var(--pad); border-bottom: 1px solid var(--line); }
       .intro-section h2, .section-title { margin: 0; text-align: center; text-transform: uppercase; font-size: clamp(1.166667rem, 2.4vw, 1.75rem); }
       .daily-title { grid-column: 1 / -1; }
+      .approach-copy {
+        max-width: 75ch;
+        margin: 2rem auto 0;
+        color: var(--body);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      .approach-copy p { margin: 0 0 1.5rem; }
+      .approach-copy ol { margin: 0 0 2rem; padding-left: 1.5rem; }
+      .approach-copy li { padding-left: 0.5rem; margin-bottom: 1.25rem; }
+      .approach-copy li p { margin: 0.5rem 0 0; }
+      .approach-copy > p:last-child { margin-bottom: 0; }
       @media (max-width: 36rem) {
         :root { --nav-height: calc((1.925rem + 33px + 0.5625rem + 20.8px + 1px) / 4); }
       }
