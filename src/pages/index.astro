@@ -269,6 +269,7 @@ const faq = [
       </section>
       <section class="intro-section founder-section" aria-labelledby="notre-histoire" style={`--approach-texture: url("${base}texture-aquarelle-ivoire.png")`}>
         <h2 id="notre-histoire" tabindex="-1">LES MOTS DE LA FONDATRICE</h2>
+        <img class="founder-portrait" src={`${base}Julie.png`} alt="Julie Ribreau, fondatrice d’Écrin" width="1086" height="1448" loading="lazy" decoding="async" />
         <div class="founder-copy">
           <blockquote class="founder-quote">
             <p>L’idée d’Écrin est née en écoutant.</p>
@@ -739,10 +740,11 @@ const faq = [
       .founder-section { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(2.5rem, 5vw, 4rem); }
       .founder-section > h2 { grid-column: 1 / -1; }
       .founder-copy { min-width: 0; font: 400 16px/1.7 "Playfair Display", Georgia, serif; color: var(--body); }
+      .founder-portrait { display: block; width: 100%; max-width: 32rem; height: auto; align-self: center; justify-self: center; }
       .founder-quote { margin: 0; }
-      .founder-quote::before, .founder-quote::after { display: block; font-size: 4rem; line-height: 1; color: var(--ink); }
-      .founder-quote::before { content: '«'; margin-bottom: 1rem; }
-      .founder-quote::after { content: '»'; text-align: right; margin-top: 1rem; }
+      .founder-quote::before, .founder-quote::after { display: block; text-align: center; font-size: 4rem; line-height: 1; color: var(--ink); }
+      .founder-quote::before { content: '“'; margin-bottom: 1rem; }
+      .founder-quote::after { content: '”'; margin-top: 1rem; }
       .founder-quote p { margin: 0 0 1.5rem; }
       .founder-quote p:last-child { margin-bottom: 0; }
       .founder-signature { margin: 2.5rem 0 0; text-align: center; font: 400 clamp(2.5rem, 4vw, 3.5rem)/1.4 "Allura", cursive; color: var(--ink); }
