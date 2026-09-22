@@ -120,7 +120,7 @@ const faq = [
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif&family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Instrument+Serif&family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@500&family=Allura&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -269,6 +269,19 @@ const faq = [
       </section>
       <section class="intro-section founder-section" aria-labelledby="notre-histoire" style={`--approach-texture: url("${base}texture-aquarelle-ivoire.png")`}>
         <h2 id="notre-histoire" tabindex="-1">LES MOTS DE LA FONDATRICE</h2>
+        <div class="founder-copy">
+          <blockquote class="founder-quote">
+            <p>L’idée d’Écrin est née en écoutant.</p>
+            <p>Dans les podcasts, des femmes, souvent fondatrices d’entreprise, racontaient ce décalage : <strong>la passion était toujours là, mais l’énergie venait à manquer.</strong> Les décisions pesaient davantage, les idées se faisaient plus rares, la patience s’effritait.</p>
+            <p>Au-delà de l’entrepreneuriat, j’ai retrouvé ces mêmes difficultés. La parole s’ouvre autour du bien-être mental.</p>
+            <p>En m’intéressant au rôle de la nutrition dans le bien-être mental et la préservation des ressources, j’ai découvert des travaux scientifiques récents explorant la place de la micronutrition dans ce domaine.</p>
+            <p>Je suis alors allée à la rencontre de femmes dont le quotidien me semblait particulièrement exigeant, pour <strong>comprendre ce qu’elles vivaient, ce qu’elles avaient déjà essayé et ce qui leur manquait.</strong> Leurs expériences, leurs attentes et leurs interrogations ont progressivement donné une direction au projet.</p>
+            <p>Je voulais réunir ces attentes dans un complément pensé pour soutenir la récupération, avec l’ambition d’aider les femmes à retrouver une énergie plus stable, de la clarté d’esprit et davantage de disponibilité. Le tout dans une routine simple et agréable, qui trouve sa place même lorsque le quotidien s’intensifie.</p>
+            <p>Comme un tel complément alimentaire n’existe pas, je vais entreprendre de l’inventer.</p>
+          </blockquote>
+          <p class="founder-signature">Julie Ribreau</p>
+          <p class="founder-role">Fondatrice d’Écrin</p>
+        </div>
       </section>
       <section class="intro-section" aria-labelledby="contact">
         <h2 id="contact" tabindex="-1">RESTONS EN LIEN</h2>
@@ -722,6 +735,23 @@ const faq = [
         background: #f7f5f1 var(--approach-texture) repeat;
         background-size: 600px 600px;
       }
+
+      .founder-section { display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(2.5rem, 5vw, 4rem); }
+      .founder-section > h2 { grid-column: 1 / -1; }
+      .founder-copy { min-width: 0; font: 400 16px/1.7 "Playfair Display", Georgia, serif; color: var(--body); }
+      .founder-quote { margin: 0; }
+      .founder-quote::before, .founder-quote::after { display: block; font-size: 4rem; line-height: 1; color: var(--ink); }
+      .founder-quote::before { content: '«'; margin-bottom: 1rem; }
+      .founder-quote::after { content: '»'; text-align: right; margin-top: 1rem; }
+      .founder-quote p { margin: 0 0 1.5rem; }
+      .founder-quote p:last-child { margin-bottom: 0; }
+      .founder-signature { margin: 2.5rem 0 0; text-align: center; font: 400 clamp(2.5rem, 4vw, 3.5rem)/1.4 "Allura", cursive; color: var(--ink); }
+      .founder-role { margin: 1.5rem 0 0; text-align: center; }
+      @media (min-width: 56rem) {
+        .founder-section { grid-template-columns: 0.85fr 1.15fr; }
+        .founder-copy { grid-column: 2; }
+      }
+
       .approach-section {
         background: #f7f5f1 var(--approach-texture) repeat;
         background-size: 600px 600px;
