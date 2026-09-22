@@ -267,7 +267,7 @@ const faq = [
           <p>Ces réalités participent à ce que les femmes vivent au quotidien. C’est pour les prendre en compte dans son approche de la récupération qu’<strong>Écrin choisit de leur être dédié.</strong><br /><strong>Votre fatigue mérite d’être entendue. Vos ressources méritent d’être préservées.</strong></p>
         </div>
       </section>
-      <section class="intro-section" aria-labelledby="notre-histoire">
+      <section class="intro-section founder-section" aria-labelledby="notre-histoire" style={`--approach-texture: url("${base}texture-aquarelle-ivoire.png")`}>
         <h2 id="notre-histoire" tabindex="-1">LES MOTS DE LA FONDATRICE</h2>
       </section>
       <section class="intro-section" aria-labelledby="contact">
@@ -718,6 +718,10 @@ const faq = [
         .science-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
       }
 
+      .founder-section {
+        background: #f7f5f1 var(--approach-texture) repeat;
+        background-size: 600px 600px;
+      }
       .approach-section {
         background: #f7f5f1 var(--approach-texture) repeat;
         background-size: 600px 600px;
