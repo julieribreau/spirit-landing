@@ -667,6 +667,8 @@ const faq = [
       .intro-section h2, .section-title { margin: 0; text-align: center; text-transform: uppercase; font-size: clamp(1.166667rem, 2.4vw, 1.75rem); }
       .daily-title { grid-column: 1 / -1; }
       .mission-section {
+        background: #71816d;
+        color: #ffffff;
         display: grid;
         grid-template-columns: minmax(0, 1fr);
         gap: clamp(2.5rem, 5vw, 4rem);
@@ -675,7 +677,7 @@ const faq = [
       .mission-section > h2 { grid-column: 1 / -1; }
       .mission-copy {
         min-width: 0;
-        color: var(--body);
+        color: inherit;
         font-family: "Playfair Display", Georgia, serif;
         font-size: 16px;
         line-height: 1.7;
@@ -689,6 +691,7 @@ const faq = [
       }
 
       .science-section {
+        background: #ffffff;
         font-family: "Playfair Display", Georgia, serif;
         font-size: 16px;
         line-height: 1.7;
@@ -893,6 +896,7 @@ const faq = [
 
       /* ── Hero ── */
       .hero {
+        background: #ffffff;
         padding: clamp(2rem, 4vw, 3.5rem) var(--pad) clamp(3rem, 6vw, 5rem);
         display: grid;
         grid-template-columns: 1fr;
