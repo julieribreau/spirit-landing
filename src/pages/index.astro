@@ -702,7 +702,7 @@ const faq = [
       .mission-copy p { margin: 0 0 1.5rem; }
       .mission-copy p:last-child { margin-bottom: 0; }
       @media (min-width: 56rem) {
-        .mission-section { grid-template-columns: 1.15fr 0.85fr; }
+        .mission-section { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
         .mission-copy { grid-column: 1; }
       }
 
