@@ -257,8 +257,15 @@ const faq = [
           </article>
         </div>
       </section>
-      <section class="intro-section" aria-labelledby="notre-mission">
+      <section class="intro-section mission-section" aria-labelledby="notre-mission">
         <h2 id="notre-mission" tabindex="-1">LES FEMMES AU COEUR D'ÉCRIN</h2>
+        <div class="mission-copy">
+          <p>En s’intéressant à ce qui se passe lorsque les sollicitations du quotidien prennent progressivement le pas sur notre capacité à récupérer, une réalité apparaît : les femmes sont particulièrement concernées par le sujet, ou, tout du moins, plus enclines à exprimer ce qu’elles ressentent à ce sujet.<br /><strong>Prendre soin de ses ressources commence par reconnaître ce qui les met à l’épreuve.</strong></p>
+          <p>Dans de nombreux foyers, les femmes continuent d’assumer une grande part de l’organisation du quotidien. Anticiper, planifier, penser aux besoins de chacun : <strong>une responsabilité souvent invisible</strong>, qui peut rester présente même lorsque les tâches sont partagées.</p>
+          <p>Au travail, certaines composent également avec des attentes inégales. À leurs missions peuvent s’ajouter <strong>des tâches d’organisation et de soutien, utiles au collectif mais peu valorisées</strong> dans leur parcours professionnel.</p>
+          <p>Chez certaines femmes, le cycle menstruel s’accompagne aussi de fatigue, de perturbations du sommeil ou de variations d’humeur, notamment avant les règles. Des expériences qui diffèrent d’une femme à l’autre et appellent une attention à chacune.</p>
+          <p>Ces réalités participent à ce que les femmes vivent au quotidien. C’est pour les prendre en compte dans son approche de la récupération qu’<strong>Écrin choisit de leur être dédié.</strong><br /><strong>Votre fatigue mérite d’être entendue. Vos ressources méritent d’être préservées.</strong></p>
+        </div>
       </section>
       <section class="intro-section" aria-labelledby="notre-histoire">
         <h2 id="notre-histoire" tabindex="-1">LES MOTS DE LA FONDATRICE</h2>
@@ -659,6 +666,28 @@ const faq = [
       .intro-section { padding: 3rem var(--pad); border-bottom: 1px solid var(--line); }
       .intro-section h2, .section-title { margin: 0; text-align: center; text-transform: uppercase; font-size: clamp(1.166667rem, 2.4vw, 1.75rem); }
       .daily-title { grid-column: 1 / -1; }
+      .mission-section {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: clamp(2.5rem, 5vw, 4rem);
+        align-items: start;
+      }
+      .mission-section > h2 { grid-column: 1 / -1; }
+      .mission-copy {
+        min-width: 0;
+        color: var(--body);
+        font-family: "Playfair Display", Georgia, serif;
+        font-size: 16px;
+        line-height: 1.7;
+        text-align: left;
+      }
+      .mission-copy p { margin: 0 0 1.5rem; }
+      .mission-copy p:last-child { margin-bottom: 0; }
+      @media (min-width: 56rem) {
+        .mission-section { grid-template-columns: 1.15fr 0.85fr; }
+        .mission-copy { grid-column: 1; }
+      }
+
       .science-section {
         font-family: "Playfair Display", Georgia, serif;
         font-size: 16px;
