@@ -201,7 +201,7 @@ const faq = [
         </figure>
       </section>
 
-      <section class="intro-section approach-section" aria-labelledby="notre-approche">
+      <section class="intro-section approach-section" aria-labelledby="notre-approche" style={`--approach-texture: url("${base}texture-aquarelle-ivoire.png")`}>
         <h2 id="notre-approche" tabindex="-1">L'APPROCHE ÉCRIN</h2>
         <figure class="approach-visual">
           <img src={`${base}flacon-et-ecrin.png`} width="1122" height="1402" alt="Flacon de gélules ÉCRIN et son étui, entourés de feuillages." loading="lazy" />
@@ -716,7 +716,8 @@ const faq = [
       }
 
       .approach-section {
-        background: #f7f5f1;
+        background: #f7f5f1 var(--approach-texture) repeat;
+        background-size: 600px 600px;
         color: var(--ink);
         display: grid;
         grid-template-columns: 1fr;
@@ -724,8 +725,18 @@ const faq = [
         align-items: start;
       }
       .approach-section > h2 { grid-column: 1 / -1; }
-      .approach-visual { margin: 0; align-self: center; display: flex; justify-content: center; }
-      .approach-visual img { width: min(100%, 440px); height: auto; }
+      .approach-visual {
+        margin: 0 0 0 calc(-1 * var(--pad));
+        width: calc(100% + var(--pad));
+        align-self: center;
+        display: flex;
+        justify-content: flex-start;
+      }
+      .approach-visual img {
+        width: 100%;
+        height: auto;
+        mask-image: linear-gradient(to right, #000 94%, transparent);
+      }
       @media (min-width: 56rem) {
         .approach-section { grid-template-columns: 0.85fr 1.15fr; }
         .approach-visual { grid-column: 1; grid-row: 2; }
