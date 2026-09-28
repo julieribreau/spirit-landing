@@ -219,6 +219,9 @@ const faq = [
           <p>Nos formules sont pensées pour qu’une prise soit <strong>aussi simple qu’agréable</strong>. Nous souhaitons vous offrir un rituel qui trouve naturellement sa place dans votre vie et s’inscrit dans la durée, même lorsque le rythme s’intensifie.</p>
 
           <p>Nous visons une routine d’<strong>un à deux compléments par jour</strong>, chacun avec un rôle précis, pour réunir les bénéfices recherchés sans multiplier les produits ni les moments de prise.</p>
+          <div class="approach-cta">
+            <button class="co-construction-button" type="button" aria-haspopup="dialog">Prendre part au projet</button>
+          </div>
         </div>
       </section>
       <section class="intro-section science-section" aria-labelledby="la-science">
@@ -569,7 +572,8 @@ const faq = [
       @media (min-width: 56rem) {
         .approach-section { grid-template-columns: 0.85fr 1.15fr; }
         .approach-visual { grid-column: 1; grid-row: 2; }
-        .approach-copy { grid-column: 2; }
+        .approach-cta { text-align: center; }
+      .approach-copy { grid-column: 2; }
       }
       .approach-copy {
         min-width: 0;
@@ -735,7 +739,7 @@ const faq = [
           grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
           column-gap: clamp(2.5rem, 4.5vw, 4.5rem);
         }
-        .hero .hero-copy { width: 100%; max-width: none; justify-self: stretch; }
+        .hero .hero-copy { width: 100%; max-width: none; justify-self: stretch; padding-left: clamp(0.75rem, 1.5vw, 1.5rem); }
         .hero .hero-visuel { width: 100%; max-width: 30rem; justify-self: start; }
       }
 
@@ -1268,9 +1272,11 @@ const faq = [
 
     <script>
       const participationDialog = document.querySelector<HTMLDialogElement>('.participation-dialog')!;
-      document.querySelector('.co-construction-button')!.addEventListener('click', () => {
-        participationDialog.showModal();
-        participationDialog.querySelector<HTMLInputElement>('input[type="email"]')!.focus();
+      document.querySelectorAll<HTMLButtonElement>('.co-construction-button').forEach((button) => {
+        button.addEventListener('click', () => {
+          participationDialog.showModal();
+          participationDialog.querySelector<HTMLInputElement>('input[type="email"]')!.focus();
+        });
       });
       document.querySelector('.participation-close')!.addEventListener('click', () => participationDialog.close());
       const header = document.querySelector<HTMLElement>('.topbar')!;
