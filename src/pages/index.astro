@@ -732,11 +732,16 @@ const faq = [
 
       @media (min-width: 56rem) {
         .hero {
-          grid-template-columns: 1.15fr 0.85fr;
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+          column-gap: clamp(1.5rem, 2.5vw, 2.5rem);
         }
+        .hero .hero-copy { width: 100%; max-width: 30rem; justify-self: end; }
+        .hero .hero-visuel { width: 100%; max-width: 30rem; justify-self: start; }
       }
 
-      .hero-copy { align-self: start; }
+      .hero-copy { align-self: center; }
+      .hero-copy > p:first-child { margin-top: 0; }
+      .hero-copy > p:last-child { margin-bottom: 0; }
       .hero-copy .lead { font-family: "Playfair Display", Georgia, serif; font-weight: 500; font-size: 16px; }
 
       .hero-title {
