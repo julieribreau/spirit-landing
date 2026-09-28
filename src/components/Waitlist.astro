@@ -2,7 +2,7 @@
 // Endpoint Formspree (ou équivalent). Défini via la variable GitHub PUBLIC_FORM_ENDPOINT.
 // ponytail: pas de backend, le test d'intérêt n'a besoin que d'une liste d'emails.
 const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT ?? '';
-const { variant = 'full', id } = Astro.props;
+const { variant = 'full', id, showNote = true } = Astro.props;
 ---
 
 <form
@@ -43,7 +43,7 @@ const { variant = 'full', id } = Astro.props;
   <!-- Anti-spam : champ invisible que seuls les bots remplissent -->
   <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="gotcha" />
 
-  <p class="note">Accès prioritaire au lancement. Pas de spam, désinscription en un clic.</p>
+  {showNote && (<p class="note">Accès prioritaire au lancement. Pas de spam, désinscription en un clic.</p>)}
   <p class="feedback" role="status" aria-live="polite"></p>
 </form>
 

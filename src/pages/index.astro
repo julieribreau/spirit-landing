@@ -285,6 +285,8 @@ const faq = [
           <p><strong>L’approche Écrin vous parle ? Aidez-nous à lui donner forme.</strong></p>
           <p>Le projet se construit, votre expérience peut l’enrichir. Vos attentes, vos idées et ce qui compte dans votre quotidien nous aideront à concevoir des compléments au plus près de vos besoins.<br />
           Laissez-nous votre adresse e-mail pour suivre les prochaines étapes et être invitée à partager votre point de vue.</p>
+          <a class="co-construction-button" href="#email-final">Prendre part au projet</a>
+          <p class="co-construction-note">Accès prioritaire au lancement. Pas de spam, désinscription en un clic.</p>
         </div>
       </section>
 
@@ -297,7 +299,7 @@ const faq = [
             chapitre sur la formule, le format et le prix. Aucune obligation d’achat, jamais.
           </p>
           <div class="cta-form">
-            <Waitlist id="final" variant="full" />
+            <Waitlist id="final" variant="full" showNote={false} />
           </div>
         </div>
       </section>
@@ -500,6 +502,23 @@ const faq = [
       }
       .co-construction-copy p { margin: 0 0 1.5rem; }
       .co-construction-copy p:last-child { margin-bottom: 0; }
+      .co-construction-button {
+        display: inline-block;
+        margin-top: 0.5rem;
+        padding: 15px 28px;
+        background: var(--ink);
+        color: var(--paper);
+        font: 400 15px/1.5 var(--sans);
+        text-decoration: none;
+        transition: background 0.2s ease;
+      }
+      .co-construction-button:hover { background: var(--accent); }
+      .co-construction-copy .co-construction-note {
+        margin: 12px 0 0;
+        font: 400 13px/1.6 var(--sans);
+        color: var(--muted-2);
+      }
+      #email-final { scroll-margin-top: 8rem; }
       .science-intro {
         margin: clamp(2.5rem, 5vw, 4rem) auto 0;
         text-align: center;
