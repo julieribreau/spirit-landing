@@ -221,6 +221,7 @@ const faq = [
           <p>Nous visons une routine d’<strong>un à deux compléments par jour</strong>, chacun avec un rôle précis, pour réunir les bénéfices recherchés sans multiplier les produits ni les moments de prise.</p>
           <div class="approach-cta">
             <button class="co-construction-button" type="button" aria-haspopup="dialog">Prendre part au projet</button>
+            <p class="approach-cta-note">Laissez-nous votre adresse e-mail pour suivre les prochaines étapes et être invitée à partager votre point de vue.</p>
           </div>
         </div>
       </section>
@@ -572,7 +573,8 @@ const faq = [
       @media (min-width: 56rem) {
         .approach-section { grid-template-columns: 0.85fr 1.15fr; }
         .approach-visual { grid-column: 1; grid-row: 2; }
-        .approach-cta { text-align: center; }
+        .approach-cta { margin-top: 1rem; text-align: center; }
+      .approach-cta .approach-cta-note { max-width: 52ch; margin: 0.75rem auto 0; font: 400 13px/1.6 var(--sans); color: var(--muted-2); }
       .approach-copy { grid-column: 2; }
       }
       .approach-copy {
