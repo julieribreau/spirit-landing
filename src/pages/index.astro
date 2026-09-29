@@ -134,7 +134,7 @@ const faq = [
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" /><path d="m16 16 5 5" /></svg>
         </button>
         <a class="logo" href="#top">ÉCRIN</a>
-        <span class="topbar-note">Bientôt disponible</span>
+
       </div>
       <nav class="topbar-nav" aria-label="Présentation">
         <a href="#votre-quotidien">VOTRE QUOTIDIEN</a>
@@ -473,6 +473,7 @@ const faq = [
       @media (min-width: 56rem) {
         .mission-section { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
         .mission-copy { grid-column: 1; }
+        .mission-image { align-self: start; margin-top: var(--mission-image-offset, 8rem); }
       }
 
       .science-section {
@@ -1278,6 +1279,16 @@ const faq = [
     </style>
 
     <script>
+      const missionCopy = document.querySelector<HTMLElement>('.mission-copy')!;
+      const missionIntro = missionCopy.querySelector<HTMLElement>('p')!;
+      const alignMissionImage = () => {
+        const lineHeight = parseFloat(getComputedStyle(missionIntro).lineHeight);
+        const offset = Math.max(0, missionIntro.getBoundingClientRect().height - lineHeight);
+        missionCopy.closest<HTMLElement>('.mission-section')!.style.setProperty('--mission-image-offset', offset + 'px');
+      };
+      new ResizeObserver(alignMissionImage).observe(missionIntro);
+      document.fonts.ready.then(alignMissionImage);
+      alignMissionImage();
       const participationDialog = document.querySelector<HTMLDialogElement>('.participation-dialog')!;
       document.querySelectorAll<HTMLButtonElement>('.co-construction-button').forEach((button) => {
         button.addEventListener('click', () => {
